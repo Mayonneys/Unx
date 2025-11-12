@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unx — Old Money Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main Navigation -->
+  <div class="main-nav d-flex align-items-center justify-content-between px-4">
+    <!-- Left: Search -->
+    <div class="nav-left d-flex align-items-center">
+      <input type="text" placeholder="Search..." class="search-input" />
+    </div>
+
+    <!-- Center: Brand -->
+    <div class="brand text-center flex-fill">
+      <a href="index.html" class="brand-link">
+        <span class="brand-mark">UNX.</span>
+      </a>
+    </div>
+
+    <!-- Right: Hamburger and Navigation -->
+    <div class="d-flex align-items-center">
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav justify-content-end" id="navMenu">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link cart-wrapper" href="cart.html"> Cart <span id="cart-count" class="cart-count">0</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Messenger Button -->
+  <button id="messageBtn">✉</button>
+
+  <!-- Messenger Popup -->
+  <div id="messengerPopup">
+    <div id="messengerHeader">
+      <span>Messenger</span>
+      <button id="closeMessenger">&times;</button>
+    </div>
+    <div id="chatContent">
+      <div><em>Start the conversation!</em></div>
+    </div>
+    <div id="messageInputContainer">
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class = "hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">UNISEX</h1>
+        <h2 class="hero-sub">The difference between style and fashion is quality</h2>
+        <button id="btnBrowse" class="btn-primary">Browse</button>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">The New Standard.</h2>
+      <div id="featured-grid" class="product-grid"></div>
+    </section>
+
+    <section class="container small-note">
+      <p>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>About UNX</h3>
+      <p>Your trusted partner in quality products and excellent service.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: unxInternational@gmail.com</p>
+      <p>Phone: +63 91234567890</p>
+      <p>Address: 123 Main St, Cityville</p>
+    </div>
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <a href="#" aria-label="Facebook" class="social-icon facebook"></a>
+      <a href="#" aria-label="Instagram" class="social-icon instagram"></a>
+      <a href="#" aria-label="Twitter" class="social-icon twitter"></a>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Unisex. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  <script src="app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
